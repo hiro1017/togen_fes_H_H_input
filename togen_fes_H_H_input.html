@@ -1,5 +1,9 @@
 <html lang="ja">
-    <div id="disp_count">0</div>
+
+    <div id="disp_count_01">0</div>
+    <div id="disp_count_02">0</div>
+    
+
 
     <head>
         <title>兎原祭　お化け屋敷　パスワード入力用</title>
@@ -152,40 +156,107 @@
 
             </style>
             <script type="text/javascript">
-                window.onload = function() {
+                window.addEventListener ("load",function() {
         
         // オブジェクトと変数の準備
-        var count_disp = document.getElementById("disp_count");  
-        var count_up_btn = document.getElementById("btn_count_up");
-        var reset_btn = document.getElementById("btn_reset");
-        var count_value = 0;
+        var count_disp_01 = document.getElementById("disp_count_01");  
+        var count_up_btn_01 = document.getElementById("btn_count_up_01");
+        var count_down_btn_01 = document.getElementById("btn_count_down_01");
+        var reset_btn_01 = document.getElementById("btn_reset_01");
+        var count_value_01 = 0;
         
         // カウントアップボタンクリック処理
-        count_up_btn.onclick = function (){
-             count_value += 1;
-             count_disp.innerHTML = count_value;
+        count_up_btn_01.onclick = function (){
+             count_value_01 += 1;
+             count_disp_01.innerHTML = count_value_01;
         };
         // カウントアップボタンのマウスダウン処理
-        count_up_btn.onmousedown = function() {
-             count_up_btn.style.backgroundColor = "#00FF00";
+        count_up_btn_01.onmousedown = function() {
+             count_up_btn_01.style.backgroundColor = "#666666";
         }
         // カウントアップボタンのマウスアップ処理
-        count_up_btn.onmouseup = function() {
-             count_up_btn.style.backgroundColor = "";
+        count_up_btn_01.onmouseup = function() {
+             count_up_btn_01.style.backgroundColor = "";
         }
         // リセットボタンのクリック処理
-        reset_btn.onclick = function (){
-             count_value = 0; count_disp.innerHTML = count_value;
+        reset_btn_01.onclick = function (){
+             count_value_01 = 0; count_disp_01.innerHTML = count_value_01;
         }
         // リセットボタンのマウスダウン処理
-        reset_btn.onmousedown = function() {
-             reset_btn.style.backgroundColor = "#00FF00";
+        reset_btn_01.onmousedown = function() {
+             reset_btn_01.style.backgroundColor = "#666666";
         }
         // リセットボタンのマウスアップ処理
-        reset_btn.onmouseup = function() {
-             reset_btn.style.backgroundColor = "";
+        reset_btn_01.onmouseup = function() {
+             reset_btn_01.style.backgroundColor = "";
         }
+
+        count_down_btn_01.onclick = function (){
+             count_value_01 -= 1;
+             count_disp_01.innerHTML = count_value_02;
         };
+
+        count_down_btn_01.onmousedown = function(){
+            count_up_btn_01.style.backgroundColor = "#666666";
+        }
+
+        count_down_btn_01.onmouseup = function() {
+            count_down_btn_02.style.backgroundColor = "";
+        }
+        });
+
+
+        
+                window.addEventListener("load",function() {
+        
+        // オブジェクトと変数の準備
+        var count_disp_02 = document.getElementById("disp_count_02");  
+        var count_up_btn_02 = document.getElementById("btn_count_up_02");
+        var count_down_btn_02 = document.getElementById("btn_count_down_02");
+        var reset_btn_02 = document.getElementById("btn_reset_02");
+        var count_value_02 = 0;
+        
+        // カウントアップボタンクリック処理
+        count_up_btn_02.onclick = function (){
+             count_value_02 += 1;
+             count_disp_02.innerHTML = count_value_02;
+        };
+        // カウントアップボタンのマウスダウン処理
+        count_up_btn_02.onmousedown = function() {
+             count_up_btn_02.style.backgroundColor = "#666666";
+        }
+        // カウントアップボタンのマウスアップ処理
+        count_up_btn_02.onmouseup = function() {
+             count_up_btn_02.style.backgroundColor = "";
+        }
+        // リセットボタンのクリック処理
+        reset_btn_02.onclick = function (){
+             count_value_02 = 0; count_disp_02.innerHTML = count_value_02;
+        }
+        // リセットボタンのマウスダウン処理
+        reset_btn_02.onmousedown = function() {
+             reset_btn_02.style.backgroundColor = "#666666";
+        }
+        // リセットボタンのマウスアップ処理
+        reset_btn_02.onmouseup = function() {
+             reset_btn_02.style.backgroundColor = "";
+        }
+
+
+        count_down_btn_02.onclick = function (){
+             count_value_02 -= 1;
+             count_disp_02.innerHTML = count_value_02;
+        };
+
+        count_down_btn_01.onmousedown = function(){
+            count_up_btn_01.style.backgroundColor = "#666666";
+        }
+
+        count_down_btn_02.onmouseup = function() {
+            count_down_btn_02.style.backgroundColor = "";
+        }
+        });
+        
               </script>
         
         
@@ -228,15 +299,15 @@
         
         </div>
 
-        <div class="uparw1" id="btn_count_up">
+        <div class="uparw1" id="btn_count_up_01">
 
             <h1 onclick="">▲</h1>
         
         </div>
 
-        <div class="uparw2">
+        <div class="uparw2" id="btn_count_up_02">
 
-            <h1>↑</h1>
+            <h1 onclick="">▲</h1>
         
         </div>
 
@@ -252,15 +323,15 @@
         
         </div>
 
-        <div class="dwarw1">
+        <div class="dwarw1" id="btn_count_down_01">
 
-            <h1>↓</h1>
+            <h1 onclick="">▼</h1>
         
         </div>
 
-        <div class="dwarw2">
+        <div class="dwarw2" id="btn_count_down_02">
 
-            <h1>↓</h1>
+            <h1 onclick="">▼</h1>
         
         </div>
 
